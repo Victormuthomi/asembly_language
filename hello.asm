@@ -1,7 +1,10 @@
 section .data
 
+msg db "Hello aseembly world",0xa
 msg1 db "I am just trying to see what is assembly language", 0xa
-len equ $ -msg1
+msg2 db "I dont know what am doing am just playing around.", 0xa
+len equ $ -msg
+len1 equ $ -msg1
 
 section .text
 
@@ -11,7 +14,7 @@ _start:
     
 
     mov edx, len
-    mov ecx, msg1
+    mov ecx, msg
     mov eax,1
     mov eax,4
     int 0x80
